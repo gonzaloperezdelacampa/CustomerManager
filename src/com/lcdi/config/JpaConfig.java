@@ -15,6 +15,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class JpaConfig {
     @Bean
     public LocalEntityManagerFactoryBean entityManagerFactory() {
+
+       
+        
         LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
         factoryBean.setPersistenceUnitName("SalesDB");
          
@@ -22,6 +25,7 @@ public class JpaConfig {
     }
      
     @Bean
+
     public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManagerFactory);
