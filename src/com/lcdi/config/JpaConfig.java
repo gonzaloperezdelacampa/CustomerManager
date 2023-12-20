@@ -14,10 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class JpaConfig {
     @Bean
-    public LocalEntityManagerFactoryBean entityManagerFactory() {
-
-       
-        
+    public LocalEntityManagerFactoryBean entityManagerFactory() { 
         LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
         factoryBean.setPersistenceUnitName("SalesDB");
          
